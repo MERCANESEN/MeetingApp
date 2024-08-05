@@ -7,11 +7,19 @@ namespace MeetingApp.Controllers
     
     public class MeetingController : Controller
     {
-        public string Index()
+        public IActionResult Index()
         {
-            return "Meeting(index)";
+            return View();
         }
 
-        
+        public IActionResult Apply(){
+
+            return View();
+
+        }
+        public IActionResult List(){
+            
+            return View();
+        }
     }
 }
