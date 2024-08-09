@@ -2,6 +2,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 var app = builder.Build();
 
+app.UseStaticFiles();
+
+app.UseRouting();
 //mvc addcontrollerwithviews mvc şablonu için kullanılan bir servis
 //rest api için farklı bir servis 
 //razor pages için farklı bir servis kullanılır
