@@ -4,11 +4,16 @@ namespace MeetingApp.Controllers
 {
     public class HomeController : Controller
     {
-        //localhost/home
-        //localhost
-        //localhost/home/Index
+        
         public IActionResult Index(){
 
+            int saat= DateTime.Now.Hour;
+            
+            //ViewBag.Selamlama = saat > 12 ? "İyi Günler":"Günaydın";
+            // ViewBag.UserName = "Mercan";
+
+            ViewData["Selamlama"]= saat > 12 ? "İyi Günler":"Günaydın";
+            ViewData["UserName"]= "Mercan";
             return View();
         }
     }
